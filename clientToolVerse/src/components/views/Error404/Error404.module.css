@@ -1,0 +1,104 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(65deg, #1a1a1a, #2c2c2c, #f4c434, #1a1a1a);
+  background-size: 400% 400%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 1.6rem;
+  animation: cambiar 10s ease-in infinite;
+}
+
+@keyframes cambiar {
+  0%   { background-position: 0 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+.error h1 {
+  color: #fff;
+  font-size: 8rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  animation: teclear 3s steps(16);
+}
+
+@keyframes teclear {
+  from { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+  to   { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+}
+
+.typeError {
+  color: var(--secondary);
+  font-size: 8rem;
+  font-weight: 800;
+  animation: moveH2 1s ease-out 3.5s infinite;
+}
+
+@keyframes moveH2 {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+.messageOne {
+  color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.messageOne span {
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.messageTwo {
+  border: 1px solid rgba(255,255,255,0.2);
+  border-left: 4px solid var(--secondary);
+  border-radius: var(--radius-sm);
+  padding: 1.6rem 2rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 1.4rem;
+  max-width: 56rem;
+  text-align: center;
+}
+
+.backHome {
+  margin-top: 0.8rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 3.2rem;
+  background-color: var(--secondary);
+  color: var(--dark);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: var(--secondary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 196, 52, 0.4);
+}
+
+@media (max-width: 480px) {
+  .error h1 {
+    font-size: 5rem;
+  }
+
+  .typeError {
+    font-size: 5rem;
+  }
+}

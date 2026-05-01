@@ -1,0 +1,57 @@
+.homeDiv {
+  min-height: 100vh;
+  background-color: var(--gray-light);
+}
+
+/* Carousel wrapper */
+.carouselWrapper {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 2.4rem 1.6rem 0;
+}
+
+/* Toolbar: filters + ordering + clear button */
+.filtOrd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.2rem;
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 1.6rem 1.6rem 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+}
+
+.button input {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.6rem;
+  background-color: var(--gray-light);
+  border: 1px solid var(--gray-mid);
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--dark);
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition);
+  white-space: nowrap;
+}
+
+.button input:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+@media (max-width: 600px) {
+  .filtOrd {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+}
