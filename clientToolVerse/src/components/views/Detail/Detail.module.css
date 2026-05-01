@@ -1,0 +1,138 @@
+.datailReview {
+  max-width: 110rem;
+  margin: 3.2rem auto;
+  padding: 0 1.6rem;
+}
+
+.detailContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  align-items: flex-start;
+  background-color: var(--primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 3.2rem;
+  border-top: 4px solid var(--secondary);
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.imageContainer img {
+  width: 100%;
+  max-width: 36rem;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
+.infoContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-size: 1.5rem;
+  color: var(--dark);
+  min-width: 0;
+}
+
+.infoContainer h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+.infoContainer h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--gray-text);
+}
+
+.infoContainer h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.block {
+  font-weight: 600;
+}
+
+.addToCart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1.2rem 2rem;
+  background-color: var(--secondary);
+  color: var(--dark);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+  margin-top: 0.8rem;
+}
+
+.addToCart:hover {
+  background-color: var(--secondary-dark);
+  transform: translateY(-1px);
+}
+
+.reviewComp {
+  margin-top: 2.4rem;
+  background-color: var(--primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 2.4rem;
+}
+
+.reviewComp textarea {
+  width: 100%;
+  min-height: 8rem;
+  padding: 1rem 1.4rem;
+  border: 2px solid var(--gray-mid);
+  border-radius: var(--radius-sm);
+  font-size: 1.4rem;
+  font-family: inherit;
+  color: var(--dark);
+  background-color: var(--gray-light);
+  resize: vertical;
+  outline: none;
+  margin-top: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .detailContainer {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .imageContainer img {
+    max-width: 28rem;
+  }
+
+  .infoContainer h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .infoContainer h1 {
+    font-size: 1.8rem;
+  }
+
+  .imageContainer img {
+    max-width: 22rem;
+  }
+}

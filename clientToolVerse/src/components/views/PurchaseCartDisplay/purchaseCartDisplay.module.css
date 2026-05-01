@@ -1,0 +1,130 @@
+.overallCompra {
+  max-width: 100rem;
+  margin: 3.2rem auto;
+  padding: 0 1.6rem;
+}
+
+.titulo {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 2.4rem;
+}
+
+.detallesTotal {
+  display: flex;
+  gap: 2.4rem;
+  align-items: flex-start;
+  margin-bottom: 2.4rem;
+}
+
+.userDetails {
+  flex: 1;
+  background-color: var(--primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  border-top: 4px solid var(--secondary);
+  font-size: 1.4rem;
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.userDetails h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.userDetails h4:first-child {
+  margin-top: 0;
+}
+
+.prodDetails {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gray-mid);
+  font-size: 1.4rem;
+}
+
+.nameMiniProd {
+  flex: 1;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.priceMiniProd {
+  font-weight: 700;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+.total {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-top: 1.6rem;
+}
+
+/* Payment section */
+.toPay {
+  display: flex;
+  justify-content: center;
+  padding: 2.4rem 0;
+}
+
+.buttonPay {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.buttonPay:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.buttonPay:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.mercadoPago {
+  width: 22rem;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-sm);
+}
+
+.errorMsg {
+  font-size: 1.4rem;
+  color: #d32f2f;
+  background-color: #fdecea;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid #d32f2f;
+  padding: 1.2rem 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+@media (max-width: 768px) {
+  .detallesTotal {
+    flex-direction: column;
+  }
+
+  .userDetails {
+    width: 100%;
+  }
+
+  .mercadoPago {
+    width: 18rem;
+  }
+}

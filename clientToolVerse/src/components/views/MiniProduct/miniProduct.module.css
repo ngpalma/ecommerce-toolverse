@@ -1,0 +1,140 @@
+.divMiniProd {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--gray-mid);
+}
+
+.nameImgMini {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex: 2;
+  min-width: 0;
+}
+
+.imgMiniProd {
+  height: 6.4rem;
+  width: 6.4rem;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  background-color: var(--gray-light);
+  padding: 0.4rem;
+}
+
+.nameMiniProd {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.brandModelMini {
+  flex: 1;
+  font-size: 1.2rem;
+  color: var(--gray-text);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.priceMiniProd {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+.stockMiniProd {
+  font-size: 1.2rem;
+  color: var(--gray-text);
+  white-space: nowrap;
+}
+
+.todoQtity {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.quantMiniProd {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--dark);
+  min-width: 5rem;
+}
+
+.lessQtity,
+.addQtity {
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid var(--gray-mid);
+  border-radius: var(--radius-sm);
+  background-color: var(--gray-light);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+.lessQtity:hover,
+.addQtity:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.mas,
+.menos {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.deleteProd {
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid var(--gray-mid);
+  border-radius: var(--radius-sm);
+  background-color: var(--gray-light);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+.deleteProd:hover {
+  background-color: #fdecea;
+  border-color: #d32f2f;
+}
+
+.bin {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.warning {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #d32f2f;
+}
+
+@media (max-width: 600px) {
+  .divMiniProd {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .brandModelMini {
+    display: none;
+  }
+
+  .stockMiniProd {
+    display: none;
+  }
+}
