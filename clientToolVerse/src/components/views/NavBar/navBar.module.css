@@ -1,0 +1,162 @@
+.navBar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  height: 6.4rem;
+  width: 100%;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  height: 4.8rem;
+  width: auto;
+  display: block;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.logoBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.searchBar {
+  flex: 1;
+  max-width: 48rem;
+  margin: 0 2.4rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-shrink: 0;
+}
+
+.registerBtn {
+  background-color: var(--dark);
+  color: var(--primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+
+.registerBtn:hover {
+  background-color: #333;
+  transform: translateY(-1px);
+}
+
+.cartBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition);
+}
+
+.cartBtn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cartBtnImg {
+  height: 3.2rem;
+  width: auto;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  z-index: 101;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--dark);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile overlay menu */
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 6.4rem;
+  left: 0;
+  right: 0;
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-md);
+  padding: 2rem;
+  flex-direction: column;
+  gap: 1.2rem;
+  z-index: 99;
+}
+
+.mobileMenu.open {
+  display: flex;
+}
+
+.mobileMenu .registerBtn {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.5rem;
+}
+
+.mobileMenu .cartBtn {
+  justify-content: center;
+  padding: 1.2rem;
+  background-color: rgba(0,0,0,0.08);
+  border-radius: var(--radius-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .searchBar {
+    max-width: none;
+    margin: 0 1.2rem;
+    flex: 1;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navBar {
+    padding: 0 1.2rem;
+  }
+
+  .logo {
+    height: 3.8rem;
+  }
+}
