@@ -1,0 +1,44 @@
+.divButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 2rem 1.6rem;
+}
+
+.divButtons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.6rem;
+  height: 3.6rem;
+  padding: 0 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: inherit;
+  border: 1px solid var(--gray-mid);
+  border-radius: var(--radius-sm);
+  background-color: var(--primary);
+  color: var(--dark);
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.divButtons button:hover:not(:disabled) {
+  background-color: var(--gray-light);
+  border-color: var(--secondary);
+}
+
+.divButtons button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Active / current page button */
+.button {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+  color: var(--dark) !important;
+  font-weight: 700 !important;
+}

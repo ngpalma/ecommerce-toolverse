@@ -1,0 +1,78 @@
+.userLogin {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.UserIcon {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  padding: 0.4rem;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.08);
+  transition: border-color var(--transition), background-color var(--transition);
+  object-fit: contain;
+}
+
+.userLogin:hover .UserIcon {
+  border-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.UserMenu {
+  position: absolute;
+  top: calc(100% + 0.8rem);
+  right: 0;
+  min-width: 17rem;
+  background-color: var(--primary);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-md);
+  padding: 0.6rem;
+  z-index: 200;
+  border: 1px solid var(--gray-mid);
+}
+
+.UserMenu button {
+  display: block;
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--dark);
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.UserMenu button:hover {
+  background-color: var(--secondary);
+}
+
+/* Animation */
+.UserMenuAnimation-enter {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.UserMenuAnimation-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 250ms, transform 250ms;
+}
+
+.UserMenuAnimation-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.UserMenuAnimation-exit-active {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 200ms, transform 200ms;
+}

@@ -1,0 +1,47 @@
+.orderingContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ordenamientos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.alphabeticalOrder,
+.orderByPrice {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--gray-light);
+  border: 1px solid var(--gray-mid);
+  border-radius: 2rem;
+  transition: border-color var(--transition);
+}
+
+.alphabeticalOrder:focus-within,
+.orderByPrice:focus-within {
+  border-color: var(--secondary);
+}
+
+.orderTitle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+.alphabeticalOrder select,
+.orderByPrice select {
+  border: none;
+  background: transparent;
+  font-size: 1.3rem;
+  font-family: inherit;
+  color: var(--dark);
+  cursor: pointer;
+  outline: none;
+  padding: 0.2rem 0;
+}
