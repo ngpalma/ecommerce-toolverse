@@ -1,0 +1,33 @@
+.title {
+  margin-bottom: 2rem;
+}
+
+.title h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--dark);
+}
+
+.divReview {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  background-color: var(--gray-light);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.imgProd {
+  height: 6.4rem;
+  width: 6.4rem;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.nameProd {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark);
+}

@@ -1,0 +1,103 @@
+.userProfileContainer {
+  display: flex;
+  gap: 2.4rem;
+  align-items: flex-start;
+  max-width: 120rem;
+  margin: 3.2rem auto;
+  padding: 0 1.6rem;
+}
+
+/* Sidebar */
+.secondaryContainer {
+  flex: 0 0 24rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.nameContainer h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.3;
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background-color: var(--primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 1.2rem;
+}
+
+.customButton {
+  background-color: transparent;
+  color: var(--dark);
+  padding: 1rem 1.6rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+  text-align: left;
+  width: 100%;
+}
+
+.customButton:hover {
+  background-color: var(--gray-light);
+}
+
+.activeButton {
+  background-color: var(--secondary);
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.activeButton:hover {
+  background-color: var(--secondary-dark);
+}
+
+/* Main content panel */
+.componentContainer {
+  flex: 1;
+  min-width: 0;
+  background-color: var(--primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 2.4rem;
+  border-top: 4px solid var(--secondary);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .userProfileContainer {
+    flex-direction: column;
+    margin: 2rem auto;
+  }
+
+  .secondaryContainer {
+    flex: none;
+    width: 100%;
+  }
+
+  .menuContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .customButton {
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .componentContainer {
+    width: 100%;
+  }
+}
